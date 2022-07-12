@@ -1,0 +1,74 @@
+---
+title: Breadcrumbs
+link: https://mui.com/components/breadcrumbs
+---
+
+##### Simple
+
+<Block>
+  <Breadcrumbs
+    links={[
+      { name: 'Home', href: '/' },
+      { name: 'Components', href: '/components' },
+      { name: 'Breadcrumbs' },
+    ]}
+  />
+</Block>
+
+```jsx
+import { Breadcrumbs } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<Breadcrumbs
+  links={[
+    { name: 'Home', href: '/' },
+    { name: 'Components', href: '/components' },
+    { name: 'Breadcrumbs' },
+  ]}
+/>;
+```
+
+##### With Icon and activeLast
+
+<Block>
+  <Breadcrumbs
+    activeLast
+    links={[
+      {
+        name: 'Home',
+        href: '/',
+        icon: <Iconify icon="carbon:cube" />,
+      },
+      { name: 'Components', href: '/components', icon: <Iconify icon="carbon:grid" /> },
+      {
+        name: 'Breadcrumbs',
+      },
+    ]}
+  />
+</Block>
+
+```jsx
+import { Breadcrumbs, Iconify } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<Breadcrumbs
+  activeLast
+  links={[
+    {
+      name: 'Home',
+      href: '/',
+      icon: <Iconify icon="carbon:cube" />,
+    },
+    {
+      name: 'Components',
+      href: '/components',
+      icon: <Iconify icon="carbon:grid" />,
+    },
+    {
+      name: 'Breadcrumbs',
+    },
+  ]}
+/>;
+```

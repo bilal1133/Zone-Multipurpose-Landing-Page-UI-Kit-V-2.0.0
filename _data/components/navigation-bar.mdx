@@ -1,0 +1,105 @@
+---
+title: Navigation Bar
+---
+
+<Block>
+  <NavSection />
+</Block>
+
+```jsx
+import batIcon from '@iconify/icons-carbon/bat';
+import playIcon from '@iconify/icons-carbon/play';
+import areaIcon from '@iconify/icons-carbon/area';
+import beeBat from '@iconify/icons-carbon/bee-bat';
+import cyclistIcon from '@iconify/icons-carbon/cyclist';
+import airport01 from '@iconify/icons-carbon/airport-01';
+import apertureIcon from '@iconify/icons-carbon/aperture';
+import batteryFull from '@iconify/icons-carbon/battery-full';
+import basketballIcon from '@iconify/icons-carbon/basketball';
+import icon3dCursorAlt from '@iconify/icons-carbon/3d-cursor-alt';
+import icon3dMprToggle from '@iconify/icons-carbon/3d-mpr-toggle';
+import { NavSection, Iconify } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+const NAV_ITEMS = [
+  {
+    subheader: 'Marketing',
+    items: [
+      { title: 'Landing', path: '/marketing', icon: <Iconify icon={batIcon} /> },
+      {
+        title: 'Services',
+        path: '/marketing/services',
+        icon: <Iconify icon={cyclistIcon} />,
+      },
+      {
+        title: 'Case Studies',
+        path: '/marketing/case-studies',
+        icon: <Iconify icon={icon3dCursorAlt} />,
+        children: [
+          { title: 'Case Studies', path: '/marketing/case-studies' },
+          { title: 'Case Study', path: '/marketing/case-studies/case-study-01' },
+        ],
+      },
+      {
+        title: 'Blog',
+        path: '/marketing/blog',
+        icon: <Iconify icon={icon3dMprToggle} />,
+        children: [
+          { title: 'Blog Posts', path: '/marketing/blog' },
+          { title: 'Blog Post', path: '/marketing/blog/post-01' },
+        ],
+      },
+      { title: 'About', path: '/marketing/about-us', icon: <Iconify icon={airport01} /> },
+      { title: 'Contact', path: '/marketing/contact-us', icon: <Iconify icon={batteryFull} /> },
+      //
+    ],
+  },
+  {
+    subheader: 'Travel',
+    items: [
+      { title: 'Landing', path: '/travel', icon: <Iconify icon={apertureIcon} /> },
+      {
+        title: 'Tours',
+        path: '/travel/tours',
+        icon: <Iconify icon={basketballIcon} />,
+        children: [
+          { title: 'Tours', path: '/travel/tours' },
+          { title: 'Tour', path: '/travel/tours/e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1' },
+        ],
+      },
+      {
+        title: 'Checkout',
+        path: '/travel/checkout',
+        icon: <Iconify icon={areaIcon} />,
+        children: [
+          { title: 'Checkout', path: '/travel/checkout' },
+          { title: 'Checkout Complete', path: '/travel/checkout/complete' },
+        ],
+      },
+      {
+        title: 'Blog',
+        path: '/travel/blog',
+        icon: <Iconify icon={playIcon} />,
+        children: [
+          { title: 'Blog Posts', path: '/travel/blog' },
+          { title: 'Blog Post', path: '/travel/blog/post-01' },
+        ],
+      },
+      { title: 'About', path: '/travel/about-us', icon: <Iconify icon={cyclistIcon} /> },
+      { title: 'Contact', path: '/travel/contact-us', icon: <Iconify icon={beeBat} /> },
+    ],
+  },
+];
+
+<NavSection
+  navConfig={NAV_ITEMS}
+  sx={{
+    py: 5,
+    borderRadius: 2,
+    maxWidth: DRAWER_WIDTH,
+    bgcolor: 'background.default',
+    boxShadow: (theme) => theme.customShadows.z24,
+  }}
+/>;
+```

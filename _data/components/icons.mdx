@@ -1,0 +1,144 @@
+---
+title: Icons
+link: https://iconify.design
+---
+
+##### SvgIconStyle
+
+<p variant="body2" sx={{ color: 'text.secondary' }}>
+  Style svg files from a local folder.
+</p>
+
+<Block sx={{ '& > *': { mr: 2 } }}>
+<SvgIconStyle src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg" sx={{ width: 40, height: 40 }} />
+
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'text.secondary' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'text.disabled' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'primary.main' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'secondary.main' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'info.main' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'success.main' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'warning.main' }}
+/>
+<SvgIconStyle
+  src="https://zone-assets-api.vercel.app/assets/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'error.main' }}
+/>
+</Block>
+
+```jsx
+import {SvgIconStyle} from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40 }} />
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'text.secondary' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'text.disabled' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'primary.main' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'secondary.main' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'info.main' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'success.main' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'warning.main' }}
+/>
+
+<SvgIconStyle
+  src="/static/icons/ic_banking.svg"
+  sx={{ width: 40, height: 40, color: 'error.main' }}
+/>
+```
+
+##### Iconify
+
+<Block sx={{ '& > *': { mr: 2 } }}>
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40 }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'text.secondary' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'text.disabled' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'primary.main' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'secondary.main' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'info.main' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'success.main' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'warning.main' }} />
+  <Iconify icon={'carbon:cube'} sx={{ width: 40, height: 40, color: 'error.main' }} />
+</Block>
+
+```jsx
+import {Iconify} from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40 }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'text.secondary' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'text.disabled' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'primary.main' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'secondary.main' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'info.main' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'success.main' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'warning.main' }} />
+<Iconify icon='carbon:cube' sx={{ width: 40, height: 40, color: 'error.main' }} />
+
+//OR
+import {Iconify} from '../../src/components';
+import cubeIcon from '@iconify/icons-carbon/cube';
+
+// ----------------------------------------------------------------------
+
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40 }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'text.secondary' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'text.disabled' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'primary.main' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'secondary.main' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'info.main' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'success.main' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'warning.main' }} />
+<Iconify icon={cubeIcon} sx={{ width: 40, height: 40, color: 'error.main' }} />
+
+```

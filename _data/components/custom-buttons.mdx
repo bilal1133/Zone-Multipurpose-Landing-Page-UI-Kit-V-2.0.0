@@ -1,0 +1,80 @@
+---
+title: Custom Buttons
+---
+
+##### Animate Button
+
+<Block sx={{ textAlign: 'center', '& > *': { mx: 2 } }}>
+  <IconButton />
+  <FabButton />
+  <FabButton variant="extended" color="secondary">
+    Extended
+  </FabButton>
+</Block>
+
+```jsx
+import { IconButtonAnimate, FabButtonAnimate } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<IconButtonAnimate>
+  <Iconify icon={playIcon} />
+</IconButtonAnimate>;
+
+<FabButtonAnimate>
+  <Iconify icon={playIcon} />
+</FabButtonAnimate>;
+
+<FabButtonAnimate variant="extended" color="secondary">
+  <Iconify icon={playIcon} /> Extended
+</FabButtonAnimate>;
+```
+
+##### Favorite Button
+
+<Block sx={{ textAlign: 'center' }}>
+  <FavoriteButton />
+</Block>
+
+```jsx
+import { FavoriteButton } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+const { enqueueSnackbar } = useSnackbar();
+const [favorite, setFavorite] = useState(favorited);
+
+const handleChangeFavorite = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setFavorite(event.target.checked);
+};
+
+<FavoriteButton checked={favorite} onChange={handleChangeFavorite} />;
+```
+
+##### Share Button
+
+<Block sx={{ textAlign: 'center' }}>
+  <ShareButton />
+</Block>
+
+```jsx
+import { ShareButton } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<ShareButton />;
+```
+
+##### AppStore Button
+
+<Block sx={{ '& h6': { m: 0 } }}>
+  <AppStoreButton sx={{ justifyContent: 'center' }} />
+</Block>
+
+```jsx
+import { AppStoreButton } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<AppStoreButton />;
+```

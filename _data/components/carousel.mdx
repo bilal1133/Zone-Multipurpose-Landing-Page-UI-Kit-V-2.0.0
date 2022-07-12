@@ -1,0 +1,60 @@
+---
+title: Carousel
+link: https://react-slick.neostack.com
+---
+
+<Block>
+  <Carousel />
+</Block>
+
+```jsx
+import Slider from 'react-slick';
+import { useRef } from 'react';
+import { CarouselDots, CarouselArrows } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+function Carousel() {
+  const carouselRef = (useRef < Slider) | (null > null);
+
+  const handlePrevious = () => {
+    carouselRef.current?.slickPrev();
+  };
+
+  const handleNext = () => {
+    carouselRef.current?.slickNext();
+  };
+
+  const carouselSettings = {
+    dots: true,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    ...CarouselDots({ sx: { my: 3 } }),
+  };
+
+  return (
+    <Container sx={{ position: 'relative' }}>
+      <CarouselArrows
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+        sx={{
+          '& .arrow': {
+            mt: -5,
+            '&.left': { left: -16 },
+            '&.right': { right: -16 },
+          },
+        }}
+      >
+        <Slider ref={carouselRef} {...carouselSettings}>
+          {IMAGES.map((img) => (
+            <Box key={img} sx={{ px: 1 }}>
+              <Image alt={img} src={img} ratio="1/1" sx={{ borderRadius: 2 }} />
+            </Box>
+          ))}
+        </Slider>
+      </CarouselArrows>
+    </Container>
+  );
+}
+```

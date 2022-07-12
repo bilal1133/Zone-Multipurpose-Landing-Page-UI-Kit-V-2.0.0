@@ -1,0 +1,51 @@
+---
+title: Player
+link: https://github.com/CookPete/react-player
+---
+
+<Block>
+  <PlayerImage />
+</Block>
+
+```jsx
+import { PlayerWithImage } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<PlayerWithImage
+  imgPath="https://zone-assets-api.vercel.app/assets/images/travel/travel_hero_4.jpg"
+  videoPath={_mock.video}
+  ratio="16/9"
+/>;
+```
+
+<Block sx={{ textAlign: 'center', py: 10 }}>
+  <PlayerButton />
+</Block>
+
+```jsx
+import { PlayerWithButton } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+function PlayerButton() {
+  const [openVideo, setOpenVideo] = useState(false);
+
+  const handleOpenVideo = () => {
+    setOpenVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setOpenVideo(false);
+  };
+
+  return (
+    <>
+      <IconButtonAnimate onClick={handleOpenVideo}>
+        <Iconify icon={playIcon} />
+      </IconButtonAnimate>
+      <PlayerWithButton open={openVideo} onClose={handleCloseVideo} videoPath={_mock.video} />
+    </>
+  );
+}
+```

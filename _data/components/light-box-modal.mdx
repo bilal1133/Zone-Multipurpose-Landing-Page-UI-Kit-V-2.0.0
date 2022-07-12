@@ -1,0 +1,65 @@
+---
+title: Light Box Modal
+link: https://frontend-collective.github.io/react-image-lightbox
+---
+
+<Block>
+  <Lightbox />
+</Block>
+
+```tsx
+import { LightboxModal } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+function LightboxDemo() {
+  const [openLightbox, setOpenLightbox] = useState(false);
+  const [selectedImage, setSelectedImage] = useState < number > 0;
+
+  const imgs = [
+    'https://zone-assets-api.vercel.app/assets/images/travel/travel_1.jpg',
+    'https://zone-assets-api.vercel.app/assets/images/travel/travel_2.jpg',
+    'https://zone-assets-api.vercel.app/assets/images/travel/travel_3.jpg',
+    'https://zone-assets-api.vercel.app/assets/images/travel/travel_4.jpg',
+  ];
+
+  const handleOpenLightbox = (url: string) => {
+    const selectedImage = findIndex(imgs, (index) => index === url);
+    setOpenLightbox(true);
+    setSelectedImage(selectedImage);
+  };
+
+  return (
+    <>
+      <Stack direction="row" spacing={2}>
+        {imgs.map((img) => (
+          <Image
+            key={img}
+            alt={img}
+            src={img}
+            onClick={() => handleOpenLightbox(img)}
+            sx={{
+              width: 120,
+              height: 120,
+              borderRadius: 2,
+              cursor: 'pointer',
+              '&:hover': {
+                opacity: 0.8,
+              },
+            }}
+          />
+        ))}
+      </Stack>
+
+      <LightboxModal
+        images={imgs}
+        mainSrc={imgs[selectedImage]}
+        photoIndex={selectedImage}
+        setPhotoIndex={setSelectedImage}
+        isOpen={openLightbox}
+        onCloseRequest={() => setOpenLightbox(false)}
+      />
+    </>
+  );
+}
+```

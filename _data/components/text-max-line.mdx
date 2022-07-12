@@ -1,0 +1,89 @@
+---
+title: Text Max Line
+---
+
+##### Max Line 1
+
+<Block>
+  <TextMaxLine line={1} sx={{ maxWidth: 300 }}>
+    Donec posuere vulputate arcu. Fusce vulputate eleifend sapien. Phasellus magna. Proin sapien
+    ipsum, porta a, auctor quis, euismod ut, mi. Suspendisse faucibus, nunc et pellentesque egestas,
+    lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
+  </TextMaxLine>
+</Block>
+
+```jsx
+import { TextMaxLine } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<TextMaxLine line={1} sx={{ maxWidth: 300 }}>
+  Donec posuere vulputate arcu. Fusce vulputate eleifend sapien. Phasellus magna. Proin sapien
+  ipsum, porta a, auctor quis, euismod ut, mi. Suspendisse faucibus, nunc et pellentesque egestas,
+  lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
+</TextMaxLine>;
+```
+
+##### Max Line 2 (Default)
+
+<Block>
+  <TextMaxLine sx={{ maxWidth: 300 }}>
+    Donec posuere vulputate arcu. Fusce vulputate eleifend sapien. Phasellus magna. Proin sapien
+    ipsum, porta a, auctor quis, euismod ut, mi. Suspendisse faucibus, nunc et pellentesque egestas,
+    lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
+  </TextMaxLine>
+</Block>
+
+```jsx
+import { TextMaxLine } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<TextMaxLine sx={{ maxWidth: 300 }}>
+  Donec posuere vulputate arcu. Fusce vulputate eleifend sapien. Phasellus magna. Proin sapien
+  ipsum, porta a, auctor quis, euismod ut, mi. Suspendisse faucibus, nunc et pellentesque egestas,
+  lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
+</TextMaxLine>;
+```
+
+##### With Link
+
+<Block>
+  <TextMaxLine asLink line={3} href="#" color="primary" sx={{ maxWidth: 300 }}>
+    Donec posuere vulputate arcu. Fusce vulputate eleifend sapien. Phasellus magna. Proin sapien
+    ipsum, porta a, auctor quis, euismod ut, mi. Suspendisse faucibus, nunc et pellentesque egestas,
+    lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
+  </TextMaxLine>
+</Block>
+
+```jsx
+import { TextMaxLine } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<Typography variant="h3">
+  <TextMaxLine asLink line={3} href="#" color="primary" sx={{ maxWidth: 300 }}>
+    Donec posuere vulputate arcu. Fusce vulputate eleifend sapien. Phasellus magna. Proin sapien
+    ipsum, porta a, auctor quis, euismod ut, mi. Suspendisse faucibus, nunc et pellentesque egestas,
+    lacus ante convallis tellus, vitae iaculis lacus elit id tortor.
+  </TextMaxLine>
+</Typography>;
+```
+
+##### With Persistent
+
+<Block>
+  <TextMaxLine persistent line={3} href="#" sx={{ maxWidth: 300, bgcolor: 'common.white' }}>
+    Donec posuere vulputate arcu.
+  </TextMaxLine>
+</Block>
+
+```jsx
+import { TextMaxLine } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+<TextMaxLine persistent line={3} href="#" sx={{ maxWidth: 300, bgcolor: 'common.white' }}>
+  Donec posuere vulputate arcu.
+</TextMaxLine>;
+```

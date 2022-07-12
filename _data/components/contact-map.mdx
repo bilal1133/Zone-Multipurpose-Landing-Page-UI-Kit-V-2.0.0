@@ -1,0 +1,44 @@
+---
+title: Contact Map
+link: https://visgl.github.io/react-map-gl
+---
+
+<Block sx={{ '& h6': { margin: 0 } }}>
+  <ContactMap />
+</Block>
+
+```jsx
+
+import { ContactMap } from '../../src/components';
+
+// ----------------------------------------------------------------------
+
+const _offices = [{
+    id: "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b1",
+    country: "Jordan",
+    address: "19034 Verna Unions Apt. 164 - Honolulu, RI / 87535",
+    phoneNumber: "365-374-4961",
+    email: "nannie_abernathy70@yahoo.com",
+    photo: "https://zone-assets-api.vercel.app/assets/images/travel/travel_5.jpg",
+    latlng: [33, 65]
+}, {
+    id: "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b2",
+    country: "Canada",
+    address: "1147 Rohan Drive Suite 819 - Burlington, VT / 82021",
+    phoneNumber: "904-966-2836",
+    email: "ashlynn_ohara62@gmail.com",
+    photo: "https://zone-assets-api.vercel.app/assets/images/travel/travel_6.jpg",
+    latlng: [-12.5, 18.5]
+}, {
+    id: "e99f09a7-dd88-49d5-b1c8-1daf80c2d7b3",
+    country: "Portugal",
+    address: "18605 Thompson Circle Apt. 086 - Idaho Falls, WV / 50337",
+    phoneNumber: "399-757-9909",
+    email: "milo.farrell@hotmail.com",
+    photo: "https://zone-assets-api.vercel.app/assets/images/travel/travel_7.jpg",
+    latlng: [20.96, 26.27]
+}]
+
+
+<ContactMap offices={_offices} />
+```
