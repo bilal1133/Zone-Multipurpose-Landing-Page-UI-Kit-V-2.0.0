@@ -15,7 +15,9 @@
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "clear-all": "rm -rf .next _static node_modules",
     "re-start": "rm -rf .next _static node_modules && yarn install && yarn dev",
-    "re-build": "rm -rf .next _static node_modules && yarn install && yarn build"
+    "re-build": "rm -rf .next _static node_modules && yarn install && yarn build",
+    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3011 --target 8002 --cert localhost.pem --key localhost-key.pem"
+  
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
